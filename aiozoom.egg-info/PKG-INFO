@@ -1,0 +1,16 @@
+Metadata-Version: 1.1
+Name: aiozoom
+Version: 0.0.2
+Summary: Async library for interaction with Zoom API
+Home-page: UNKNOWN
+Author: Vladislav Isakov
+Author-email: vladisa88@gmail.com
+License: UNKNOWN
+Description: Async library for interaction with Zoom API
+Keywords: python,zoom,async
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Education
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
