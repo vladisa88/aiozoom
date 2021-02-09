@@ -30,6 +30,16 @@ class Client:
             data = await response.json()
             return data
 
+    async def patch(self, method: str, *args: tp.Any, **kwargs: tp.Any) -> tp.Any:
+        async with self.session.patch(f"{self.base_url}/{method}", *args, **kwargs) as response:
+            data = await response.json()
+            return data
+
+    async def delete(self, method: str, *args: tp.Any, **kwargs: tp.Any) -> tp.Any:
+        async with self.session.delete(f"{self.base_url}/{method}", *args, **kwargs) as response:
+            data = await response.json()
+            return data
+
     async def close(self):
         await self.session.close()
 
