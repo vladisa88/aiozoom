@@ -21,6 +21,16 @@ class Base(Configuration):
             method, headers=self._headers(), *args, **kwargs)
         return data
 
+    async def base_patch_request(self, method: str, *args, **kwargs) -> dict:
+        data = await client.patch(
+            method, headers=self._headers(), *args, **kwargs)
+        return data
+
+    async def base_delete_request(self, method: str, *args, **kwargs) -> dict:
+        data = await client.delete(
+            method, headers=self._headers(), *args, **kwargs)
+        return data
+
     @staticmethod
     def _headers() -> dict:
         return {
