@@ -6,6 +6,9 @@ from aiohttp import ClientSession
 BASE_URL = 'https://api.zoom.us/v2/'
 
 class Client:
+    """
+    Async client for making requests
+    """
 
     def __init__(self, base_url: str = BASE_URL) -> None:
         self.base_url = base_url
@@ -28,9 +31,6 @@ class Client:
     
     async def close(self):
         await self.session.close()
-
-    def patch(self, method: str, *args: tp.Any, **kwargs: tp.Any) -> tp.Any:
-        return self.session.patch(f"{self.base_url}/{method}", *args, **kwargs)
 
 
 client = Client()

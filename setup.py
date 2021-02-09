@@ -1,8 +1,16 @@
 from setuptools import setup, find_packages
 
-VERSION = '0.0.2' 
+from os import path
+
+directory = path.abspath(path.dirname(__file__))
+with open(path.join(directory, 'README.md'), encoding='utf-8') as f:
+    long_description = f.read()
+
+VERSION = '0.0.3.2' 
 DESCRIPTION = 'Async library for interaction with Zoom API'
-LONG_DESCRIPTION = 'Async library for interaction with Zoom API'
+LONG_DESCRIPTION = 'Async library for interaction with Zoom API.\n' \
+                    'It allows you to create, get, stop meetings ' \
+                    'and you can get statistics of past meeting'
 
 # Setting up
 setup(
@@ -11,7 +19,8 @@ setup(
         author="Vladislav Isakov",
         author_email="vladisa88@gmail.com",
         description=DESCRIPTION,
-        long_description=LONG_DESCRIPTION,
+        long_description=long_description,
+        long_description_content_type='text/markdown',
         packages=find_packages(),
         install_requires=['aiohttp'],
         keywords=['python', 'zoom', 'async'],
