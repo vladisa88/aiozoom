@@ -11,7 +11,7 @@
 
 1. In the console, run the following command:
 ```bash
-pip install --upgrade yookassa
+pip install --upgrade aiozoom
 ```
 
 

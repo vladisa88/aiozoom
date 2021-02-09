@@ -3,6 +3,10 @@ class ConfigurationError(Exception):
 
 
 class Configuration:
+    """
+    Describe auth logic. Now available
+    only JWT_TOKEN authentication
+    """
 
     auth_token: str = ''
 
