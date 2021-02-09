@@ -49,3 +49,19 @@ loop.run_until_complete(task)
 loop.close()
 
 ```
+
+## **Available methods:**
+
+```create_meeting(email, body)```
+
+```get_meeting(meeting_id)```
+
+```stop_meeting(meeting_id)```
+
+```delete_meeting(meeting_id)```
+
+```update_meeting(meeting_id, body)```
+
+and more...
+
+### Docs will be available soon...
