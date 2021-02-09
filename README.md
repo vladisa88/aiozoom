@@ -1,6 +1,6 @@
 # **AIOZOOM**
 
-![](https://travis-ci.com/vladisa88/aiozoom.svg?branch=main)
+![](https://travis-ci.com/vladisa88/aiozoom.svg?branch=main) [![CodeFactor](https://www.codefactor.io/repository/github/vladisa88/aiozoom/badge)](https://www.codefactor.io/repository/github/vladisa88/aiozoom)
 
 ## aiozoom is an async library for interaction with Zoom API
 
