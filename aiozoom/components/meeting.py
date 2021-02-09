@@ -62,4 +62,4 @@ class Meeting(Base):
             body - dict with parameters (see docs for more)
         """
         method = f'/meetings/{meeting_id}'
-        return await self.base_patch_request(method)
+        return await self.base_patch_request(method, json=body)
