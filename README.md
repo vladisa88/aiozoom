@@ -1,4 +1,7 @@
 # **AIOZOOM**
+
+![](https://travis-ci.com/vladisa88/aiozoom.svg?branch=main)
+
 ## aiozoom is an async library for interaction with Zoom API
 
 
