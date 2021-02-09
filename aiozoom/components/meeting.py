@@ -1,8 +1,4 @@
-import asyncio
-import sys
-
 from aiozoom.components.base import Base
-from aiozoom.config import client
 
 
 class Meeting(Base):

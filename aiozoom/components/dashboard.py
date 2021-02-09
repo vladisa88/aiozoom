@@ -5,12 +5,12 @@ class Dashboard(Base):
     """
     Class describing `Dashboard` logic of Zoom API
     learn more:
-    https://marketplace.zoom.us/docs/api-reference/zoom-api/dashboards/ 
+    https://marketplace.zoom.us/docs/api-reference/zoom-api/dashboards/
     """
     async def get_meeting_participants(self, meeting_id: str) -> dict:
         """
         Get list of participants with detail information
-        
+
         Params:
             meeting_id - unique id of meeting
         """

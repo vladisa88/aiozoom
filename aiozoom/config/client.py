@@ -1,3 +1,4 @@
+# pylint:disable=(missing-function-docstring)
 import typing as tp
 
 from aiohttp import ClientSession
@@ -28,7 +29,7 @@ class Client:
         async with self.session.put(f"{self.base_url}/{method}", *args, **kwargs) as response:
             data = await response.json()
             return data
-    
+
     async def close(self):
         await self.session.close()
 

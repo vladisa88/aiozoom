@@ -1,4 +1,8 @@
+# pylint:disable=(missing-function-docstring)
 class ConfigurationError(Exception):
+    """
+    Specify own exception
+    """
     pass
 
 
@@ -10,7 +14,7 @@ class Configuration:
 
     auth_token: str = ''
 
-    def __init__(self, **kwargs):
+    def __init__(self):
         self.assert_has_api_key()
 
     @staticmethod
