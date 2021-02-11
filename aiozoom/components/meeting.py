@@ -1,4 +1,6 @@
-from aiozoom.components.base import Base
+import typing as tp
+
+from aiozoom.components.base import Base, ZoomException
 
 
 class Meeting(Base):
@@ -18,6 +20,9 @@ class Meeting(Base):
         See docs for `body` sample
         https://marketplace.zoom.us/docs/api-reference/zoom-api/meetings/meetingcreate
         """
+        if not self.check_body(body):
+            raise ZoomException('Body has to be a valid python dictionary')
+
         method = f'users/{email}/meetings'
         return await self.base_post_request(method, json=body)
 
@@ -61,5 +66,15 @@ class Meeting(Base):
             meeting_id - unique id of meeting
             body - dict with parameters (see docs for more)
         """
-        method = f'/meetings/{meeting_id}'
+        if not self.check_body(body):
+            raise ZoomException('Body has to be a valid python dictionary')
+
+        method = f'meetings/{meeting_id}'
         return await self.base_patch_request(method, json=body)
+
+    @staticmethod
+    def check_body(body: tp.Any) -> bool:
+        """
+        Check if body is valid for request
+        """
+        return isinstance(body, dict)

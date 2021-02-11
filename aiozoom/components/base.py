@@ -34,5 +34,13 @@ class Base(Configuration):
     @staticmethod
     def _headers() -> dict:
         return {
-            'Authorization': f'Bearer {Configuration.auth_token}'
+            'Authorization': f'Bearer {Configuration.auth_token}',
+            'Content-Type': 'application/json'
         }
+
+
+class ZoomException(Exception):
+    """
+    Base Zoom exception
+    """
+    pass
