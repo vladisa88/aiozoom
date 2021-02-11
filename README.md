@@ -1,6 +1,6 @@
 # **AIOZOOM**
 
-![](https://travis-ci.com/vladisa88/aiozoom.svg?branch=main) [![CodeFactor](https://www.codefactor.io/repository/github/vladisa88/aiozoom/badge)](https://www.codefactor.io/repository/github/vladisa88/aiozoom)
+![](https://travis-ci.com/vladisa88/aiozoom.svg?branch=main) [![CodeFactor](https://www.codefactor.io/repository/github/vladisa88/aiozoom/badge)](https://www.codefactor.io/repository/github/vladisa88/aiozoom) [![PyPI Version](https://img.shields.io/pypi/v/aiozoom)](https://pypi.org/project/aiozoom/)
 
 ## aiozoom is an async library for interaction with Zoom API
 
