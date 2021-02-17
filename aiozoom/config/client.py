@@ -29,6 +29,9 @@ class Client:
     async def put(self, method: str, *args: tp.Any, **kwargs: tp.Any) -> tp.Any:
         async with ClientSession() as session:
             async with session.put(f"{self.base_url}/{method}", *args, **kwargs) as response:
+                raw_response = await response.text()
+                if response.status // 100 == 2 and raw_response == '':
+                    return {'status': 'success'}
                 data = await response.json()
                 return data
 
