@@ -14,5 +14,5 @@ class Dashboard(Base):
         Params:
             meeting_id - unique id of meeting
         """
-        method = f'metrics/meetings/{meeting_id}/participants'
-        return self.base_get_request(method)
+        method = f'metrics/meetings/{meeting_id}/participants?type=past&page_size=100'
+        return await self.base_get_request(method)

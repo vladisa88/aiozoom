@@ -43,10 +43,9 @@ class Meeting(Base):
         Params:
             meeting_id - unique id of meeting
         """
-        method = f'meetings/{meeting_id}'
+        method = f'meetings/{meeting_id}/status'
         body = {'action': 'end'}
-        res = await self.base_put_request(method, json=body)
-        print(res)
+        return await self.base_put_request(method, json=body)
 
     async def list_meetings(self, email: str) -> dict:
         """
