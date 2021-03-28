@@ -16,3 +16,13 @@ class Dashboard(Base):
         """
         method = f'metrics/meetings/{meeting_id}/participants?type=past&page_size=100'
         return await self.base_get_request(method)
+
+    async def get_meeting_info(self, meeting_id: str) -> dict:
+        """
+        Get information about past meeting
+
+        Params:
+            meeting_id - unique id of meeting
+        """
+        method = f'metrics/meetings/{meeting_id}?type=past'
+        return await self.base_get_request(method)
