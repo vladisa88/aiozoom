@@ -62,6 +62,10 @@ loop.close()
 
 ```update_meeting(meeting_id, body)```
 
+```get_meeting_participants(meeting_id)```
+
+```get_meeting_info(meeting_id)```
+
 and more...
 
 ### Docs will be available soon...
